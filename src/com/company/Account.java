@@ -3,19 +3,20 @@ package com.company;
 public abstract class Account {
     private String name;
     private String surName;
-    private long account;
+    private long accountNumber;
     private long deposit;
     private long withdrawals;
+    private Boolean accountOpen = true;
 
-    public enum typeAccount{
+    public enum TypeAccount{
         PERSONAL,
         COMPANY
     }
 
-    public Account(String name, String surName, long account, long deposit, long withdrawals) {
+    public Account(String name, String surName, long accountNumber, long deposit, long withdrawals) {
         this.name = name;
         this.surName = surName;
-        this.account = account;
+        this.accountNumber = accountNumber;
         this.deposit = deposit;
         this.withdrawals = withdrawals;
     }
@@ -36,8 +37,8 @@ public abstract class Account {
         this.surName = surName;
     }
 
-    public long getAccount() {
-        return account;
+    public long getAccountNumber() {
+        return accountNumber;
     }
 
     public long getDeposit() {
@@ -56,12 +57,20 @@ public abstract class Account {
         this.withdrawals = withdrawals;
     }
 
+    public Boolean getAccountOpen() {
+        return accountOpen;
+    }
+
+    public void setAccountOpen(Boolean accountOpen) {
+        this.accountOpen = accountOpen;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
                 "name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
-                ", account=" + account +
+                ", account=" + accountNumber +
                 ", deposit=" + deposit +
                 ", withdrawals=" + withdrawals +
                 '}';
