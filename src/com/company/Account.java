@@ -55,4 +55,15 @@ public abstract class Account {
     public void setWithdrawals(long withdrawals) {
         this.withdrawals = withdrawals;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", surName='" + surName + '\'' +
+                ", account=" + account +
+                ", deposit=" + deposit +
+                ", withdrawals=" + withdrawals +
+                '}';
+    }
 }
