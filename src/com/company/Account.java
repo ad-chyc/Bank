@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Account {
+public abstract class Account extends Bank{
     private String name;
     private String surName;
     private long accountNumber;
